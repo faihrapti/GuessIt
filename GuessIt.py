@@ -1,11 +1,10 @@
 import random
 
 comGuess = random.randint(1,20)
-m=0
+m,fails=0,0
 print("I'm thinking of a number between one and twenty...Can you guess it? ")
 
-while m<3: 
-    fails=0
+while m<3:
     userGuess = int(input())
     while userGuess<1 or userGuess>20:
         fails+=1
@@ -13,6 +12,8 @@ while m<3:
             print("Don't be a pain and pick a number within limits, for crying out loud.")
         elif fails==2:
             print("I'm serious, quit playing around.")
+        elif fails==5:
+            print("This is highly unfunny.")
         else:
             print("PLease")
         userGuess = int(input())
