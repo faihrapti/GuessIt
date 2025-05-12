@@ -5,7 +5,15 @@ m,fails=0,0
 print("I'm thinking of a number between one and twenty...Can you guess it? ")
 
 while m<3:
-    userGuess = int(input())
+    try_again = True
+    while (try_again == True):
+        try:
+            userGuess = input()
+            userGuess = int(userGuess)
+            try_again = False
+        except ValueError:
+            print("Nio")
+
     while userGuess<1 or userGuess>20:
         fails+=1
         if fails==1:
@@ -25,7 +33,7 @@ while m<3:
     elif userGuess == comGuess:
         print("Yup, that's right! Congrats, twat.")
         break
-    if m == 3: 
+    if m == 3:
         print(f"God, it was {comGuess}. How hard can it be?")
         break
 
