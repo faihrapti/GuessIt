@@ -12,7 +12,7 @@ while m<3:
             userGuess = int(userGuess)
             try_again = False
         except ValueError:
-            print("Nio")
+            print("Dude")
 
     while userGuess<1 or userGuess>20:
         fails+=1
@@ -22,6 +22,8 @@ while m<3:
             print("I'm serious, quit playing around.")
         elif fails==5:
             print("This is highly unfunny.")
+        elif fails==9:
+            print("For the life of you.")                       
         else:
             print("PLease")
         userGuess = int(input())
